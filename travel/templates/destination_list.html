@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Destinations</title>
+    <link rel="stylesheet" href="{% static 'travel/styles.css' %}">
+</head>
+<body>
+    <h1>Destinations</h1>
+    <ul>
+        {% for destination in destinations %}
+            <li><a href="{{ destination.id }}/">{{ destination.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
