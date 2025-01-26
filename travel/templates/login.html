@@ -1,0 +1,19 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Logowanie</title>
+</head>
+<body>
+    <h1>Formularz logowania</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Zaloguj się</button>
+    </form>
+
+    <p>Nie masz konta? <a href="#">Zarejestruj się</a></p> <!-- Link do rejestracji (jeśli potrzebujesz) -->
+</body>
+</html>

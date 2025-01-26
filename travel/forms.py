@@ -20,4 +20,5 @@ class TripForm(forms.ModelForm):
 class TripForm(forms.ModelForm):
     class Meta:
         model = Trip  
-        fields = ['destination', 'start_date', 'end_date']  
+        fields = ['destination', 'start_date', 'end_date', 'rating']
+          

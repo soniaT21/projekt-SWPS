@@ -33,6 +33,7 @@ class Trip(models.Model):
     destination = models.CharField(max_length=255)
     start_date = models.DateField()
     end_date = models.DateField()
+    rating = models.IntegerField() 
 
     def __str__(self):
         return f"{self.traveler.name} to {self.destination.name}"

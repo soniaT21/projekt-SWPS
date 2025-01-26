@@ -55,7 +55,7 @@ ROOT_URLCONF = 'travel_website.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],  # Dodaj ten wiersz
+        'DIRS': [BASE_DIR / 'templates'],  # Dodaj ścieżkę do folderu templates
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

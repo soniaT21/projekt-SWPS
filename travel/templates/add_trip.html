@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodaj swoją podróż</title>
+</head>
+<body>
+    <h1>Dodaj swoją podróż</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Dodaj podróż</button>
+    </form>
+    <a href="{% url 'home' %}">Powrót do strony głównej</a>
+</body>
+</html>
