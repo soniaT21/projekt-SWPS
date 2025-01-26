@@ -1,15 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destinations</title>
+    {% load static %}
+    <!-- Łączenie pliku CSS -->
     <link rel="stylesheet" href="{% static 'travel/styles.css' %}">
 </head>
 <body>
-    <h1>Destinations</h1>
+    <h1>Available Destinations</h1>
     <ul>
+        <!-- Iterowanie przez destynacje i ich wyświetlanie -->
         {% for destination in destinations %}
-            <li><a href="{{ destination.id }}/">{{ destination.name }}</a></li>
+            <li>
+                <a href="{{ destination.pk }}/">{{ destination.name }}</a> - {{ destination.country }}
+            </li>
+        {% empty %}
+            <li>No destinations available yet. Add some!</li>
         {% endfor %}
     </ul>
 </body>
 </html>
+
+
